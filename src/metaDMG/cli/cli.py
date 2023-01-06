@@ -131,6 +131,13 @@ def create_config(
         help="The LCA rank used in ngsLCA.",
         rich_help_panel="LCA parameters",
     ),
+    stopIfErrors: int = typer.Option(
+        0,
+        "--stopIfErrors",
+        "-Z",
+        help="Check that input file is sorted by coordinate 0 = FALSE, 1 = TRUE",
+        rich_help_panel="General parameters",
+    ),
     # GENERAL PARAMETERS
     metaDMG_cpp: str = typer.Option(
         "./metaDMG-cpp",
